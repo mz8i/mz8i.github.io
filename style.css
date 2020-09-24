@@ -1,5 +1,41 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(204, 92, 92);
+}
+
+a:hover {
+    color: rgb(233, 86, 86);
+}
+
+.icon {
+    font-size: 1.4em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.2em;
+    line-height: 1;
+}
+
+.stretch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stretch > * {
+    display: inline-block;
+}
+
+.main {
+    width: 200px;
+    margin: 0px auto;
+    margin-top: 100px;
+    padding: 30px;
+    border: 1px dashed gray;
 }
 
 .logo-prefix {
@@ -9,4 +45,13 @@ body {
 
 .logo .a10n-number {
     color: gray;
+}
+
+.info {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin: 0.5em 0;
 }
