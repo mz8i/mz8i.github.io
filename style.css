@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-prefix {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo .a10n-number {
+    color: gray;
+}
