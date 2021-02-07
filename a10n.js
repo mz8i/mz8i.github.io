@@ -52,15 +52,17 @@ function getNumberShown(borders, width) {
  * @param {boolean} collapsed Whether to start abbreviated or not
  * @param {string} text The text to abbreviate
  */
-function Abbreviation(id, collapsed, text, speed) {
+function Abbreviation(id, collapsed, text, speed, prefixLength, suffixLength) {
     this.elem = document.getElementById(id);
     this.collapsed = collapsed;
     this.text = text;
     this.speed = speed || 200;
+    this.prefixLength = prefixLength || 1;
+    this.suffixLength = suffixLength || 1;
     
-    var prefix = this.text.substr(0, 1);
-    var suffix = this.text.substr(this.text.length-1, 1);
-    this.middle = this.text.substring(1, this.text.length - 1);
+    var prefix = this.text.substr(0, this.prefixLength);
+    var suffix = this.text.substr(this.text.length-this.suffixLength, this.suffixLength);
+    this.middle = this.text.substring(this.prefixLength, this.text.length - this.suffixLength);
     
     this.elem.innerHTML = 
     `<span class="a10n-prefix">${prefix}</span><span class="a10n-middle" style="overflow:hidden; display: inline-block">${this.middle}</span><span class="a10n-number"></span><span class="a10n-suffix">${suffix}</span>`;

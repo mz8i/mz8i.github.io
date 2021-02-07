@@ -1,4 +1,4 @@
-var a10n = new Abbreviation('logo-a10n', false, "ziarkowski", 100);
+var a10n = new Abbreviation('main-logo', false, "mziarkowski", 100, 2, 1);
 
 setTimeout(function() {
     a10n.collapse();
